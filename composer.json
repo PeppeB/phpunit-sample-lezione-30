@@ -1,0 +1,18 @@
+{
+    "name": "giuseppe/phpunit-sample-lezione-30",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Giuseppe\\PhpunitSampleLezione30\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Giuseppe Bruno",
+            "email": "brpeppe@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^11.4"
+    }
+}
