@@ -6,16 +6,16 @@ use DateTimeImmutable;
 
 require_once 'src/FormattatoreData.php';
 
+// Chiama staticamente il metodo della classe FormattatoreData e stampa i risultati
 
-// Crea un'istanza della classe
-// $formattatore = new FormattatoreData();
+$dataCorrente = FormattatoreData::ottieniDataCorrente(new DateTimeImmutable(""), "Y-m-d");
+echo "Data corrente (Y-m-d): " . $dataCorrente . PHP_EOL;
 
-// Chiama i metodi e stampa i risultati
+$dataCorrente = FormattatoreData::ottieniDataCorrente(new DateTimeImmutable(""), "y.m.d");
+echo "Data corrente (y.m.d): " . $dataCorrente . PHP_EOL;
+
 $dataCorrente = FormattatoreData::ottieniDataCorrente(new DateTimeImmutable(), "d-m-y");
-echo $dataCorrente . PHP_EOL;
-$data = FormattatoreData::ottieniDataCorrente(new DateTimeImmutable("1974-12-06"), "dd-m-y");
-echo $data;
-// echo "Data corrente (YYYY-MM-DD): " . $formattatore->ottieniDataCorrente() . "\n";
-// echo "Formato 1 (YYYY/MM/DD): " . $formattatore->ottieniDataFormato1() . "\n";
-// echo "Formato 2 (YY.MM.DD): " . $formattatore->ottieniDataFormato2() . "\n";
-// echo "Formato 3 (DD-MM-YY): " . $formattatore->ottieniDataFormato3() . "\n";
+echo "Data corrente (d-m-y): " . $dataCorrente . PHP_EOL;
+
+$data = FormattatoreData::ottieniDataCorrente(new DateTimeImmutable("1974-12-06"), "d-m-y");
+echo "Data nascita (d-m-y): " . $data;

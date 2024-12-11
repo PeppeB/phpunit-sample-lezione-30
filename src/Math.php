@@ -38,7 +38,6 @@
         Questo metodo riceve un array di numeri, e restituisce UN ALTRO ARRAY in cui 
         tutti i valori sono elevati al QUADRATO.
         La soluzione utilizza array_map.        
-        This method receives a numbers array and returns another array containing the squared input values
         */
         public function getSquareList(array $numbers): array {
             $squaredNumbers = array_map(function($number) {
