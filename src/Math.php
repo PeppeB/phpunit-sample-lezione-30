@@ -5,7 +5,14 @@
     class Math implements MathContract {
         
         private int $number;
-        private array $numberList = [];
+        private array $numberList;
+
+        // Initialize the class properties
+        public function __construct()
+        {
+            $this->number = 0;
+            $this->numberList = [];
+        }
 
         // Setter per la proprietà $this->number
         public function setNumber(int $number) {
@@ -32,6 +39,18 @@
         public function isEvenNumber(int $number) : bool {
             // if $number contains an even number, return true otherwise false
             return $number % 2 === 0;
+        }
+
+        // Metodo che mostra a video i primi 10 numeri dispari
+        public function showFirstTenOddNumbers() {
+            $oddNumberCounter = 0;
+            for($i = 0, $oddNumberCounter = 0; $oddNumberCounter < 10; $i++) {
+                if(!$this->isEvenNumber($i)) {
+                    echo $i;
+                    $oddNumberCounter++;
+                }
+                echo PHP_EOL;
+            }
         }
 
         /*

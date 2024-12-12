@@ -13,10 +13,6 @@ class FormattatoreData
 			"Y-m-d", "Y/m/d", "y.m.d", "d-m-y", "ddmmyyyy"
 		];
 
-		// $allowedFormats = [
-		// 	"YYYY/mm/dd", "YY.mm.dd", "dd-mm-YY"
-		// ];
-
 		if (!in_array($format, $allowedFormats)) {
 			throw new InvalidArgumentException("Formato $format non valido");
 		}
