@@ -4,7 +4,6 @@ namespace Giuseppe\PhpunitSampleLezione30;
 
 use DateTimeImmutable;
 use InvalidArgumentException;
-use DateMalformedStringException;
 
 class BirthdayCountdown {
 
@@ -14,7 +13,7 @@ class BirthdayCountdown {
     public function __construct(string $birthDate)
     {
         if(!$this->isCorrectDateFormat($birthDate))
-            throw new InvalidArgumentException("Invalid date format. Accepted format: Y/m/d.");
+            throw new InvalidArgumentException("$birthDate Invalid date format. Accepted format: Y/m/d.");
         $this->currentDate = new DateTimeImmutable();
         $this->birthDate = new DateTimeImmutable($birthDate);
     }
